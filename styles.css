@@ -1,0 +1,103 @@
+/* Custom styles */
+body {
+  font-family: "Inter", sans-serif; /* Using Inter font */
+  margin: 0;
+  overflow: hidden; /* Prevent scrollbars */
+  background-color: #1a202c; /* Dark background */
+  color: #e2e8f0; /* Light text */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+#visualizationContainer {
+  position: relative;
+  flex-grow: 1; /* Allow container to grow */
+  min-height: 400px; /* Minimum height for the canvas */
+  /* Subtle grid background */
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px; /* Size of the grid squares */
+  cursor: default; /* Default cursor for the container */
+}
+#canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute; /* Position canvas within container */
+  top: 0;
+  left: 0;
+}
+.explanation {
+  background-color: rgba(
+    45,
+    55,
+    72,
+    0.9
+  ); /* Slightly transparent dark background (bg-slate-700 equivalent) */
+  padding: 1rem;
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Adjusted shadow for dark theme */
+  margin-bottom: 1rem;
+  border-left: 4px solid; /* Add left border for emphasis */
+  transition: background-color 0.2s ease-in-out; /* Smooth transition for highlight */
+}
+.clickable-card {
+  cursor: pointer; /* Indicate clickability */
+}
+.card-highlighted {
+  background-color: rgba(
+    71,
+    85,
+    105,
+    0.95
+  ); /* Slightly lighter background when highlighted (bg-slate-600) */
+  /* Optionally add a thicker border or other styles */
+  /* border-left-width: 6px; */
+}
+.explanation-cone {
+  border-color: #60a5fa;
+} /* Blue border for cone */
+.explanation-apex {
+  border-color: #f59e0b;
+} /* Brighter Gold border for apex */
+.explanation-base {
+  border-color: #facc15;
+} /* Gold border for base */
+.explanation-concept {
+  border-color: #a78bfa;
+} /* Purple border for concept/interaction */
+
+.refers-to {
+  font-size: 0.75rem; /* Smaller text */
+  font-style: italic;
+  color: #94a3b8; /* Lighter gray text (text-slate-400) */
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed #4a5568; /* Dashed separator (border-slate-600) */
+}
+
+#explanationContainer {
+  max-height: 100vh; /* Limit height */
+  overflow-y: auto; /* Add scroll if content overflows */
+  padding: 1.5rem; /* Padding around explanations */
+  background-color: #2d3748; /* Slightly lighter dark background (bg-slate-800) */
+}
+@media (min-width: 768px) {
+  /* md breakpoint */
+  body {
+    flex-direction: row;
+  }
+  #visualizationContainer {
+    width: 65%;
+    height: 100vh;
+    min-height: 0;
+  }
+  #explanationContainer {
+    width: 35%;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bergson's Memory Cone Visualization</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./styles.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="flex flex-col md:flex-row">
+    <div id="visualizationContainer">
+      <canvas id="canvas"></canvas>
+    </div>
+
+    <div id="explanationContainer" class="w-full md:w-1/3 p-6 overflow-y-auto">
+      <h1
+        class="text-2xl font-semibold mb-4 text-center md:text-left text-gray-100"
+      >
+        Bergson's Memory Cone
+      </h1>
+
+      <div
+        id="card-concept"
+        class="explanation explanation-concept clickable-card"
+      >
+        <h2 class="text-lg font-semibold mb-2 text-gray-100">The Concept</h2>
+        <p class="text-sm text-gray-300">
+          Henri Bergson used the metaphor of a cone to describe the nature of
+          memory and its relationship to perception and action. It illustrates
+          how our entire past coexists, virtually, and informs our present
+          experience. Use your mouse (click and drag) to rotate the cone and
+          scroll to zoom.
+        </p>
+        <p class="refers-to">Refers to: Overall Visualization</p>
+      </div>
+
+      <div id="card-cone" class="explanation explanation-cone clickable-card">
+        <h2 class="text-lg font-semibold mb-2 text-gray-100">
+          The Cone Volume
+        </h2>
+        <p class="text-sm text-gray-300">
+          The volume of the cone represents the entirety of our accumulated
+          memories, our "pure memory". It contains all past experiences,
+          existing virtually. The memories are layered, with older, more general
+          memories towards the apex and newer, more detailed memories towards
+          the base.
+        </p>
+        <p class="refers-to">Refers to: The Blue Layered Cone</p>
+      </div>
+
+      <div id="card-apex" class="explanation explanation-apex clickable-card">
+        <h2 class="text-lg font-semibold mb-2 text-gray-100">
+          The Apex (Point 'S')
+        </h2>
+        <p class="text-sm text-gray-300">
+          The apex or point (labeled 'S' in Bergson's diagrams) represents the
+          most contracted state of memory – the deepest, most consolidated, and
+          abstract past. It's the furthest point from immediate action.
+        </p>
+        <p class="refers-to">
+          Refers to: The Shiny Gold Sphere at the Point (Tip)
+        </p>
+      </div>
+
+      <div id="card-base" class="explanation explanation-base clickable-card">
+        <h2 class="text-lg font-semibold mb-2 text-gray-100">
+          The Base (Plane 'P')
+        </h2>
+        <p class="text-sm text-gray-300">
+          The circular base represents the present moment – the "plane of action
+          and perception". This is where memory intersects with the current
+          sensory-motor experience. Memories relevant to the present situation
+          are "actualized" or brought forth onto this plane to guide action.
+        </p>
+        <p class="refers-to">
+          Refers to: The Gold Circular Plane at the Cone Base
+        </p>
+      </div>
+
+      <div
+        id="card-interaction"
+        class="explanation explanation-concept clickable-card"
+      >
+        <h2 class="text-lg font-semibold mb-2 text-gray-100">Interaction</h2>
+        <p class="text-sm text-gray-300">
+          Our consciousness constantly moves between the apex (pure memory) and
+          the base (present action). When we act, we are primarily at the base.
+          When we dream or reminisce deeply, we move closer to the apex. The
+          cone visualizes this dynamic interplay between past and present.
+        </p>
+        <p class="refers-to">Refers to: The Philosophical Concept</p>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

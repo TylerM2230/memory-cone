@@ -1,4 +1,5 @@
 # Bergson's Memory Cone: A 3D Visualization
+![mem-cone](https://github.com/user-attachments/assets/98b2b5ba-15f6-4eeb-a2ff-8af794ad4d8c)
 
 This project is an interactive 3D visualization of Henri Bergson's "Memory Cone" metaphor, as primarily described in his work *Matter and Memory* (1896). It aims to provide a visual representation of Bergson's complex ideas about the nature of memory, its relationship to perception, and how the past continually informs the present moment of action.
 
